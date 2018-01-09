@@ -19,4 +19,8 @@ public class Library {
     public void stock(Book book) {
             this.books.add(book);
         }
+
+    public int getCapacity() {
+        return capacity;
+    }
 }
