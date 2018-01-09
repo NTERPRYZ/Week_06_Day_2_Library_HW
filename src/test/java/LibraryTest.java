@@ -29,4 +29,11 @@ public class LibraryTest {
     public void getBookCapacity(){
         assertEquals(100, library.getCapacity());
     }
+
+    @Test
+    public void numberOfBookSpaceLeft() {
+        library.stock(book);
+        library.stock(book);
+        assertEquals(98, library.freeStockCount());
+    }
 }

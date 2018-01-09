@@ -23,4 +23,8 @@ public class Library {
     public int getCapacity() {
         return capacity;
     }
+
+    public int freeStockCount() {
+       return this.capacity - this.books.size();
+    }
 }
