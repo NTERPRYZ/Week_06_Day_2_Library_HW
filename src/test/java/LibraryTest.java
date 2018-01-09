@@ -32,8 +32,16 @@ public class LibraryTest {
 
     @Test
     public void numberOfBookSpaceLeft() {
-        library.stock(book);
-        library.stock(book);
-        assertEquals(98, library.freeStockCount());
+        for (int i = 0; i<90; i++) {
+            library.stock(book); }
+        assertEquals(10, library.freeStockCount());
+
+    }
+
+    @Test
+    public void cantTakeInMoreBooksThanCapacity(){
+        for (int i = 0; i<110; i++) {
+            library.stock(book); }
+        assertEquals(0, library.freeStockCount());
     }
 }

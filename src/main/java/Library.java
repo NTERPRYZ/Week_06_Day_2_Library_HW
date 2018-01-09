@@ -16,9 +16,6 @@ public class Library {
         return this.books.size();
     }
 
-    public void stock(Book book) {
-            this.books.add(book);
-        }
 
     public int getCapacity() {
         return capacity;
@@ -26,5 +23,12 @@ public class Library {
 
     public int freeStockCount() {
        return this.capacity - this.books.size();
+    }
+
+    public void stock(Book book) {
+        if (this.freeStockCount() > 0) {
+            this.books.add(book);
+        }
+
     }
 }
